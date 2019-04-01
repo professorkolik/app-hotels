@@ -6,6 +6,7 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ListComponent } from './components/list/list.component';
 import { AppHotelsComponent } from './components/app-hotels/app-hotels.component';
+import { HotelComponent } from './components/hotel/hotel.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppHotelsComponent } from './components/app-hotels/app-hotels.component
     WeatherComponent,
     ProfileComponent,
     ListComponent,
-    AppHotelsComponent
+    AppHotelsComponent,
+    HotelComponent
   ],
   imports: [
     BrowserModule

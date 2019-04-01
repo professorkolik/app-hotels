@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as Data from '../../data/hotels.json';
+import { hotels as Data} from '../../data/hotels.json';
+import { IHotel } from '../../models/hotel.model';
 
 @Component({
   selector: 'app-hotels',
@@ -8,10 +9,17 @@ import * as Data from '../../data/hotels.json';
 })
 export class AppHotelsComponent implements OnInit {
 
-  constructor() { }
+  public hotels: IHotel[] = Data;
+  public selectedHotel: IHotel = null;
 
-  ngOnInit() {
-    console.log(Data.hotels);
+  public constructor() { }
+
+  public ngOnInit(): void {
+    this.selectedHotel = this.hotels[0];
+  }
+
+  public onSelectedHotel(selectedHotel: IHotel): void {
+    this.selectedHotel = selectedHotel;
   }
 
 }
